@@ -38,14 +38,14 @@
                         <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/login.php">LOGIN</a></li>
+                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/ambos.php">LOGIN</a></li>
                     </ul>
                 </div>
                 
             </div>
             </nav>
         <!--------------------------------------------Login ONG----------------------------------------------->
-            <form method="$_POST" action="../PHPConsultas/loginOng-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
+            <!----<form method="$_POST" action="../PHPConsultas/loginOng-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
                 <h2>Login ONG</h2></br>
                 <div class="form-col">
                         <div class="form-group col-md-4">
@@ -59,9 +59,9 @@
                             <button style="margin-top: 32px;" type="submit" class="btn btn-warning">Entrar</button>
                         </div>
                 </div>  
-            </form>
+            </form>----->
             <!--------------------------------------------Cadastro ONG----------------------------------------------->
-            <form method="$_POST" action="../PHPConsultas/cadastroOng-action.php" style="margin: -16.2% 0 0 50%" class="form_registro">
+            <form method="$_POST" action="../PHPConsultas/cadastroOng-action.php" class="form_registro container">
                 <h2>Cadastro ONG</h2></br>
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -74,20 +74,39 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                    <label for="inputNumber4">Registro</label>
-                    <input type="text" class="form-control" id="inputNumber4" name="registro_ong" placeholder="nº de registro">
+                    <div class="form-group col-md-8">
+                    <label for="inputNumber4">Endereço</label>
+                    <input type="text" class="form-control" id="inputNumber4" name="endereco_ong" placeholder="Rua xxx, 210">
                     </div>
-                    <div class="form-group col-md-4">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                    <label for="inputNumber4">CEP</label>
+                    <input type="text" class="form-control" id="inputNumber4" name="registro_ong" placeholder="XX.XXX-XXX">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label for="inputNumber4">Telefone</label>
+                    <input type="text" class="form-control" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group col-md-3">
                     <label for="inputNumber4">CNPJ</label>
                     <input type="text" class="form-control" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
                     </div>
                 </div>
+                    <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descrição da Instituição</label>
+                    <textarea class="form-control form-group col-md-8" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva sobre sua instituição..."></textarea>
+                    </div>
                 <div class="form-row">
-                    <div class="form-group col-md-8">
+                    <div class="form-group col-md-4">
                     <label for="inputPassword4">Senha</label>
                     <input type="password" class="form-control" id="inputPassword4" name="senha_ong" placeholder="Senha">
-                </div>
+                    </div>
+                    <!-- Verificar a função de confirmar senha
+                    <div class="form-group col-md-4">
+                    <label for="inputPassword4">Confirmar Senha</label>
+                    <input type="password" class="form-control" id="inputPassword4" name="confirmaSenha_ong" placeholder="Confirma Senha">
+                    </div>-->
                 </div>
                     <button type="submit" class="btn btn-warning">Cadastrar-se</button>
                 </div>
