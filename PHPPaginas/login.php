@@ -40,13 +40,13 @@ session_start();
                         <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/login.php">LOGIN</a></li>
+                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/ambos.php">LOGIN</a></li>
                     </ul>
                 </div>
                 
             </div>
             </nav>
-        <!--------------------------------------------Login----------------------------------------------->
+        <!--------------------------------------------Login---------------------------------------------
             <form method="POST" action="../PHPConsultas/login-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
                 <h2>Login</h2></br>
                 <div class="form-col">
@@ -61,9 +61,9 @@ session_start();
                             <button style="margin-top: 32px;" type="submit" class="btn btn-warning">Entrar</button>
                         </div>
                 </div>  
-            </form>
+            </form>-->
             <!--------------------------------------------Cadastro----------------------------------------------->
-            <form method="POST" action="../PHPConsultas/cadastro-action.php" style="margin: -16.2% 0 0 50%" class="form_registro">
+            <form method="POST" action="../PHPConsultas/cadastro-action.php" class="form_registro container">
                 <h2>Cadastro</h2></br>
                 <div class="form-row">
                     <div class="form-group col-md-4">

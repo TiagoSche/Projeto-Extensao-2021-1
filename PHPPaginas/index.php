@@ -42,7 +42,7 @@ $loggedUser = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario
                   <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>                     
                   <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($loggedUser) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($loggedUser) ? "../phpconsultas/sair" : "login"; ?>.php"><?= ($loggedUser) ? $_SESSION['nome_usuario'] : "LOGIN";  ?></a></li>
+                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($loggedUser) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($loggedUser) ? "../phpconsultas/sair" : "ambos"; ?>.php"><?= ($loggedUser) ? $_SESSION['nome_usuario'] : "LOGIN";  ?></a></li>
               </ul>
           </div>
       </div>
