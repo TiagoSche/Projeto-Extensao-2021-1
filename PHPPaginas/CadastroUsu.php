@@ -64,7 +64,7 @@ session_start();
             </form>-->
             <!--------------------------------------------Cadastro----------------------------------------------->
             <form method="POST" action="../PHPConsultas/cadastro-action.php" class="form_registro container">
-                <h2>Cadastro</h2></br>
+                <h2>Cadastro de Usuario</h2></br>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="inputEmail4">Nome</label>

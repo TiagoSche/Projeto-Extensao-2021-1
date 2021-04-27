@@ -64,7 +64,7 @@ $loggedUser = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario
                             <button style="margin-top: 32px;" type="submit" class="btn btn-warning">Entrar</button>
                         </div>
             </form>
-            <a href="../PHPPaginas/login.php"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Cadastre-se</button></a>
+            <a href="../PHPPaginas/cadastrousu.php"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Cadastre-se</button></a>
              
         </div>
     </div>
@@ -85,7 +85,7 @@ $loggedUser = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario
                             <button style="margin-top: 32px;" type="submit" class="btn btn-warning">Entrar</button>
                         </div>
             </form>
-            <a href="../PHPPaginas/loginOng.php"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Cadastre-se</button></a>
+            <a href="../PHPPaginas/cadastroong.php"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Cadastre-se</button></a>
              
             </div>
           </div>

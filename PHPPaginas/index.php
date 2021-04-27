@@ -42,7 +42,7 @@ $loggedUser = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario
                   <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>                     
                   <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($loggedUser) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($loggedUser) ? "../phpconsultas/sair" : "ambos"; ?>.php"><?= ($loggedUser) ? $_SESSION['nome_usuario'] : "LOGIN";  ?></a></li>
+                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($loggedUser) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($loggedUser) ? "../phpconsultas/sair" : "loginambos"; ?>.php"><?= ($loggedUser) ? $_SESSION['nome_usuario'] : "LOGIN";  ?></a></li>
               </ul>
           </div>
       </div>
@@ -56,9 +56,9 @@ $loggedUser = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <h2 class="sub_titulo">Faça a diferença na vida dessas pessoas com apenas alguns cliques </h2>
             <p><h6 class="linha">______</h6></p>
-            <a href="../PHPPaginas/login.php"><button type="button" class="btn btn-warning">Doar</button></a>
+            <a href="../PHPPaginas/cadastrousu.php"><button type="button" class="btn btn-warning">Doar</button></a>
             <p><h6 class="linha">_____OU_____</h6></p>
-            <a href="../PHPPaginas/loginOng.php"><button type="button" class="btn btn-warning">É uma Ong?</button></a>    
+            <a href="../PHPPaginas/cadastroong.php"><button type="button" class="btn btn-warning">É uma Ong?</button></a>    
           </div>
         </div>
       </div>
