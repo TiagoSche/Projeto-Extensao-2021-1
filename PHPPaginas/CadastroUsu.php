@@ -40,7 +40,7 @@ session_start();
                         <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/ambos.php">LOGIN</a></li>
+                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/loginambos.php">LOGIN</a></li>
                     </ul>
                 </div>
                 

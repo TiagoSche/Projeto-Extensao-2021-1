@@ -23,19 +23,83 @@ class Usuario{
         header("Location: ../phppaginas/index.php");
     }
 
-    public function cadastrarOng($email,$instituicao,$senha,$registro,$cnpj){
+    public function cadastrarOng($instituicao, $email, $endereco, $cnpj, $senha, $cep, $telefone, $descricao){
         $senha = md5($senha);
 
         $sql = "INSERT INTO instituicao SET instituicao_ong = '$instituicao', email_ong = '$email', 
-        registro_ong = '$registro', cnpj_ong = '$cnpj', senha_ong = '$senha'";
+        endereco_ong = '$endereco', cnpj_ong = '$cnpj', senha_ong = '$senha',cep_ong = '$cep',telefone_ong = '$telefone',
+        descricao_ong = '$descricao'";
 
         $sql = $this->pdo->query($sql);
-        var_dump("asijbdajsi");
-        
 
+        $id = $this->pdo->lastInsertId();
+        $this->pegaDados($id);
 
+        header("Location: ../phppaginas/index.php");
     }
 
+    public function verificaEmailOng($email){
+
+        $sql = "SELECT * FROM instituicao WHERE email_ong = :email";
+
+		$sql = 	$this->pdo->prepare($sql);
+        $sql->bindValue(':email', $email);
+        $sql->execute();
+
+		if ($sql->rowCount() > 0){ 
+			return true;
+		}else{
+			return false;
+		}
+    }
+
+    public function fazerLoginOng($email, $senha){
+
+        $senha = md5($senha);
+
+        $sql = "SELECT * FROM instituicao WHERE email_ong = :email and senha_ong = :senha";
+        
+		$sql = 	$this->pdo->prepare($sql);
+        $sql->bindValue(':email', $email);
+        $sql->bindValue(':senha', $senha);
+        $sql->execute();
+
+		if ($sql->rowCount() > 0){ 
+           
+            //salva os dados da ong no token
+            foreach ($sql->fetchAll() as $ong) { 
+				$_SESSION['id_ong'] = $ong['id_ong'];
+                $_SESSION['instituicao_ong'] = $ong['instituicao_ong'];
+                $_SESSION['email_ong'] = $ong['email_ong'];
+			}
+            
+            header("Location: ../phppaginas/index.php");
+		}else{
+            header("Location: ../phppaginas/loginambos.php");
+			
+		}
+    }
+
+    public function pegaDadosOng($id){
+        $sql = "SELECT * FROM instituicao WHERE id_ong = '$id'";
+        $sql = 	$this->pdo->prepare($sql);
+        $sql->execute();
+
+        if ($sql->rowCount() > 0){ 
+
+			foreach ($sql->fetchAll() as $ong) { 
+				$_SESSION['id_ong'] = $ong['id_ong'];
+                $_SESSION['instituicao_ong'] = $ong['instituicao_ong'];
+                $_SESSION['email_ong'] = $ong['email_ong'];
+			}
+            
+		}else{
+			return false;
+		}
+    }
+
+// Parte do Usuário 
+    
     public function verificaEmail($email){
 
         $sql = "SELECT * FROM usuario WHERE email_usuario = :email";
@@ -73,7 +137,7 @@ class Usuario{
             
             header("Location: ../phppaginas/index.php");
 		}else{
-            header("Location: ../phppaginas/login.php");
+            header("Location: ../phppaginas/loginambos.php");
 			
 		}
     }

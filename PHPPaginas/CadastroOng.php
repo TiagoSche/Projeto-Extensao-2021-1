@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("../PHPConsultas/config.php");
+   
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/estilo.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
 
     <title>Login ONG's</title>
 </head>
@@ -38,7 +40,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/ambos.php">LOGIN</a></li>
+                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/loginambos.php">LOGIN</a></li>
                     </ul>
                 </div>
                 
@@ -61,7 +63,7 @@
                 </div>  
             </form>----->
             <!--------------------------------------------Cadastro ONG----------------------------------------------->
-            <form method="$_POST" action="../PHPConsultas/cadastroOng-action.php" class="form_registro container">
+            <form method="POST" action="../PHPConsultas/cadastroOng-action.php" class="form_registro container">
                 <h2>Cadastro ONG</h2></br>
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -82,20 +84,20 @@
                 <div class="form-row">
                     <div class="form-group col-md-2">
                     <label for="inputNumber4">CEP</label>
-                    <input type="text" class="form-control" id="inputNumber4" name="registro_ong" placeholder="XX.XXX-XXX">
+                    <input type="text" class="form-control cep" id="inputNumber4" name="cep_ong" placeholder="XX.XXX-XXX">
                     </div>
                     <div class="form-group col-md-3">
                     <label for="inputNumber4">Telefone</label>
-                    <input type="text" class="form-control" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
+                    <input type="text" class="form-control telefone" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
                     </div>
                     <div class="form-group col-md-3">
                     <label for="inputNumber4">CNPJ</label>
-                    <input type="text" class="form-control" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
+                    <input type="text" class="form-control cnpj" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
                     </div>
                 </div>
                     <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descrição da Instituição</label>
-                    <textarea class="form-control form-group col-md-8" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva sobre sua instituição..."></textarea>
+                    <textarea class="form-control form-group col-md-8" id="exampleFormControlTextarea1" rows="3" name="descricao_ong" placeholder="Escreva sobre sua instituição..."></textarea>
                     </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -133,6 +135,11 @@
                             </div>
                         </div>
                     </div>
+                    <script>                  
+                        $(".cnpj").mask('000.000.000/0000-00', {reverse: true});
+                        $(".telefone").mask('00 00000-0000', {reverse: true});
+                        $(".cep").mask('000.000-00', {reverse: true});
+                    </script>
 </body>
 </html>
 

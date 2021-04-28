@@ -4,16 +4,21 @@ require('Usuario.php');
 
 $instituicao = filter_input(INPUT_POST, "instituicao_ong");
 $email = filter_input(INPUT_POST, "email_ong", FILTER_VALIDATE_EMAIL);
-$registro = filter_input(INPUT_POST, "registro_ong");
 $cnpj = filter_input(INPUT_POST, "cnpj_ong");
 $senha = filter_input(INPUT_POST, "senha_ong");
+$cep = filter_input(INPUT_POST, "cep_ong");
+$telefone = filter_input(INPUT_POST, "telefone_ong");
+$descricao = filter_input(INPUT_POST, "descricao_ong");
+$endereco = filter_input(INPUT_POST, "endereco_ong");
+echo"deu certo";
 
 $ong = new Usuario($pdo);
 
-if($instituicao && $email && $registro && $cnpj && $senha){
-    if($usuario->verificaEmail($email)){
+if($instituicao && $email && $endereco && $cnpj && $senha && $cep && $telefone && $descricao){
+    if($ong->verificaEmailOng($email)){
         echo "Esse email ja existe!";
     }else{
-        $ong->cadastrarOng($instituicao, $email, $registro, $cnpj, $senha);
+        $ong->cadastrarOng($instituicao, $email, $endereco, $cnpj, $senha, $cep, $telefone, $descricao);
+        echo"deu certo";
     }
 }

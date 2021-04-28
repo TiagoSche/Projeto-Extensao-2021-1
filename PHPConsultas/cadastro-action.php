@@ -8,6 +8,8 @@ $senha = filter_input(INPUT_POST, "senha_usuario");
 $sobrenome = filter_input(INPUT_POST, "sobrenome");
 $cpf = filter_input(INPUT_POST, "cpf_usuario");
 
+
+
 $usuario = new Usuario($pdo);
 
 if($nome && $email && $senha && $sobrenome && $cpf){
