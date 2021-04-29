@@ -117,14 +117,16 @@
     </div>
     <script>
       var botaoSair = document.querySelector("#botaoSair");
-      botaoSair.onclick=function() {
-      var diolog = confirm("Deseja mesmo sair?");
+      if (botaoSair != null){
+        botaoSair.onclick=function() {
+        var diolog = confirm("Deseja mesmo sair?");
 
-      if (!diolog){
-        return false;
-      }
+          if (!diolog){
+          return false;
+        }
       
-    }
+        }
+      }
     </script>
 </body>
 </html>
