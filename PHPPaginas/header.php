@@ -1,6 +1,5 @@
 <?php session_start(); 
 $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) || isset($_SESSION['instituicao_ong']) && !empty($_SESSION['instituicao_ong']);
-
 ?>
 
 
