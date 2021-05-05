@@ -15,7 +15,9 @@
 <body>
   
 <!------------------------------------------------------Menu-------------------------------------------------------------> 
-  <?php  include "header.php"; ?>
+  <?php  include "header.php"; 
+  $_SESSION["ERRO"] = '';
+  ?>
 
     <div class="container">
         <div class="card-deck mb-3 text-center">

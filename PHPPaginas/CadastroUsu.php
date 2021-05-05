@@ -13,7 +13,9 @@
     <title>Login</title>
 </head>
 <body>
-    <?php  include "header.php"; ?>
+    <?php  include "header.php"; 
+    $_SESSION["ERRO"] = '';
+    ?>
 
         <!--------------------------------------------Login---------------------------------------------
             <form method="POST" action="../PHPConsultas/login-action.php" style="margin: 10% 0% 0% 20%" class="form_login">

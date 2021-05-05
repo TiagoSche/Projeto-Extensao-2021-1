@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
@@ -13,7 +12,8 @@
     <title>Login ONG's</title>
 </head>
 <body>
-    <?php   include "header.php"; ?>
+    <?php
+    include "header.php";?>
 
         <!--------------------------------------------Login ONG----------------------------------------------->
             <!----<form method="$_POST" action="../PHPConsultas/loginOng-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
@@ -37,31 +37,31 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="inputName4">Nome da ONG</label>
-                    <input type="text" class="form-control" id="inputEmail4" name="instituicao_ong" placeholder="Nome">
+                    <input type="text" required="required" class="form-control" id="inputEmail4" name="instituicao_ong" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-4">
                     <label for="inputEmail4">E-mail</label>
-                    <input type="email" class="form-control" id="inputEmail4" name="email_ong" placeholder="instituicao@ong.com.br">
+                    <input type="email" required="required" class="form-control" id="inputEmail4" name="email_ong" placeholder="instituicao@ong.com.br">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-8">
                     <label for="inputNumber4">Endereço</label>
-                    <input type="text" class="form-control" id="inputNumber4" name="endereco_ong" placeholder="Rua xxx, 210">
+                    <input type="text" required="required" class="form-control" id="inputNumber4" name="endereco_ong" placeholder="Rua xxx, 210">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
                     <label for="inputNumber4">CEP</label>
-                    <input type="text" class="form-control cep" id="inputNumber4" name="cep_ong" placeholder="XX.XXX-XXX">
+                    <input type="text" required="required" class="form-control cep" id="inputNumber4" name="cep_ong" placeholder="XX.XXX-XXX">
                     </div>
                     <div class="form-group col-md-3">
                     <label for="inputNumber4">Telefone</label>
-                    <input type="text" class="form-control telefone" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
+                    <input type="text" required="required" class="form-control telefone" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
                     </div>
                     <div class="form-group col-md-3">
                     <label for="inputNumber4">CNPJ</label>
-                    <input type="text" class="form-control cnpj" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
+                    <input type="text" required="required" class="form-control cnpj" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
                     </div>
                 </div>
                     <div class="form-group">
@@ -71,13 +71,14 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="inputPassword4">Senha</label>
-                    <input type="password" class="form-control" id="inputPassword4" name="senha_ong" placeholder="Senha">
+                    <input type="password" required="required" class="form-control" id="inputPassword4" name="senha_ong" placeholder="Senha">
                     </div>
-                    <!-- Verificar a função de confirmar senha
+                    <!-- Verificar a função de confirmar senha-->
                     <div class="form-group col-md-4">
                     <label for="inputPassword4">Confirmar Senha</label>
                     <input type="password" class="form-control" id="inputPassword4" name="confirmaSenha_ong" placeholder="Confirma Senha">
-                    </div>-->
+                    </div>
+                    <?= $_SESSION["ERRO"] ?>
                 </div>
                     <button type="submit" class="btn btn-warning">Cadastrar-se</button>
                 </div>
@@ -107,7 +108,7 @@
                     <script>                  
                         $(".cnpj").mask('000.000.000/0000-00', {reverse: true});
                         $(".telefone").mask('00 00000-0000', {reverse: true});
-                        $(".cep").mask('000.000-00', {reverse: true});
+                        $(".cep").mask('00.000-000', {reverse: true});
                     </script>
 </body>
 </html>
