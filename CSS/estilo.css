@@ -26,18 +26,18 @@ header.masthead {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.dropdown-content {
+.dropdown-content{
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 230px;
+  min-width: 130px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 10px 20px;
   text-decoration: none;
   display: block;
   border: 2px solid white;
@@ -97,4 +97,7 @@ header.masthead {
   width: 100%;
   background: url("../IMG//bg-masthead.jpg");
   height: 900px;
+}
+.dropdown-content{
+  right: 0;
 }

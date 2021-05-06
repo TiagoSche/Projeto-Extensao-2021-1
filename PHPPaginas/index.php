@@ -8,6 +8,8 @@
     <title>Index</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/estilo.css">
+    
+    
 <style>
 </style>
 
@@ -17,6 +19,7 @@
 <!------------------------------------------------------Menu-------------------------------------------------------------> 
 <?php  include "header.php";
 $_SESSION["ERRO"] = '';
+
 ?>
 
 
@@ -29,9 +32,9 @@ $_SESSION["ERRO"] = '';
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <h2 class="sub_titulo">Faça a diferença na vida dessas pessoas com apenas alguns cliques </h2>
             <p><h6 class="linha">______</h6></p>
-            <a href="../PHPPaginas/cadastrousu.php"><button type="button" class="btn btn-warning">Doar</button></a>
+            <a href="<?= ($logged) ? "doar" : "loginAmbos"; ?>.php"><button type="button" class="btn btn-warning">Doar</button></a>
             <p><h6 class="linha">_____OU_____</h6></p>
-            <a href="../PHPPaginas/cadastroong.php"><button type="button" class="btn btn-warning">É uma Ong?</button></a>    
+            <a href="<?= ($logged) ? "paginas" : "loginAmbos"; ?>.php"><button type="button" class="btn-usuario btn btn-warning">É uma Ong?</button></a>    
           </div>
         </div>
       </div>
@@ -117,18 +120,6 @@ $_SESSION["ERRO"] = '';
           </div><br><br>
         </div>
     </div>
-    <script>
-      var botaoSair = document.querySelector("#botaoSair");
-      if (botaoSair != null){
-        botaoSair.onclick=function() {
-        var diolog = confirm("Deseja mesmo sair?");
-
-          if (!diolog){
-          return false;
-        }
-      
-        }
-      }
-    </script>
+    <script src="../JS/botoes.js"></script>
 </body>
 </html>

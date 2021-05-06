@@ -1,7 +1,13 @@
 <?php session_start(); 
 $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) || isset($_SESSION['instituicao_ong']) && !empty($_SESSION['instituicao_ong']);
 ?>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
 
 <nav class="navbar navbar-expand-lg " id="mainNav">
       <div class="container">
@@ -28,7 +34,14 @@ $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) 
                   <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>                     
                   <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($logged) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($logged) ? "../phpconsultas/sair" : "loginambos"; ?>.php"><?= ($logged) ? $_SESSION['nome_usuario'] : "LOGIN";  ?></a></li>
+                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($logged) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($logged) ? "../phpconsultas/sair" : "loginambos"; ?>.php"><?= ($logged) ? $_SESSION['nome_usuario'] : "LOGIN" ;  ?></a></li>
+                  <div class="dropdown"><!---->
+                    <img style="margin-left: 20px" class="dropbtn" src="../IMG/login-iconeicon.svg">
+                      <div class="dropdown-content">
+                        <a href="../PHPPaginas/perfil.php">Meu perfil</a>
+                        <a href="../PHPConsultas/sair.php">Sair</a>
+                      </div>
+                  </div>
               </ul>
           </div>
       </div>
