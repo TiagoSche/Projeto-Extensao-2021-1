@@ -1,5 +1,14 @@
 <?php session_start(); 
 $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) || isset($_SESSION['instituicao_ong']) && !empty($_SESSION['instituicao_ong']);
+    if($logged === true){
+      echo "<div class='dropdown'>
+      <img style='margin-left: 97%' class='dropbtn' src='../IMG/login-iconeicon.svg'>
+        <div class='dropdown-content'>
+          <a href='../PHPPaginas/perfil.php'>Meu perfil</a>
+          <a href='../PHPConsultas/sair.php'>Sair</a>
+        </div>
+        </div>";
+    }
 ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,14 +43,7 @@ $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) 
                   <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>                     
                   <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                  <li class="nav-item"> <a class="nav-link btn btn-warning" id="<?= ($logged) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($logged) ? "../phpconsultas/sair" : "loginambos"; ?>.php"><?= ($logged) ? $_SESSION['nome_usuario'] : "LOGIN" ;  ?></a></li>
-                  <div class="dropdown"><!---->
-                    <img style="margin-left: 20px" class="dropbtn" src="../IMG/login-iconeicon.svg">
-                      <div class="dropdown-content">
-                        <a href="../PHPPaginas/perfil.php">Meu perfil</a>
-                        <a href="../PHPConsultas/sair.php">Sair</a>
-                      </div>
-                  </div>
+                  <li class="nav-item"><a class="nav-link btn btn-warning" id="<?= ($logged) ? "botaoSair" : "botaoLogin"; ?>" href="../PHPPaginas/<?= ($logged) ? "../phpconsultas/sair" : "loginambos"; ?>.php"><?= ($logged) ? $_SESSION['nome_usuario'] : "LOGIN" ;  ?></a></li>
               </ul>
           </div>
       </div>
