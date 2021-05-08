@@ -15,7 +15,9 @@
 <body>
   
 <!------------------------------------------------------Menu-------------------------------------------------------------> 
-<?php  include "header.php";?>
+<?php  include "header.php";
+$_SESSION["ERRO"] = '';
+?>
 
 
   <header class="masthead text-white text-center">

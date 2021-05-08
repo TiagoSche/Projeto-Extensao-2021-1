@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
@@ -13,7 +12,8 @@
     <title>Login ONG's</title>
 </head>
 <body>
-    <?php   include "header.php"; ?>
+    <?php
+    include "header.php";?>
 
         <!--------------------------------------------Login ONG----------------------------------------------->
             <!----<form method="$_POST" action="../PHPConsultas/loginOng-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
@@ -73,11 +73,12 @@
                     <label for="inputPassword4">Senha</label>
                     <input type="password" required="required" class="form-control" id="inputPassword4" name="senha_ong" placeholder="Senha">
                     </div>
-                    <!-- Verificar a função de confirmar senha
+                    <!-- Verificar a função de confirmar senha-->
                     <div class="form-group col-md-4">
                     <label for="inputPassword4">Confirmar Senha</label>
                     <input type="password" class="form-control" id="inputPassword4" name="confirmaSenha_ong" placeholder="Confirma Senha">
-                    </div>-->
+                    </div>
+                    <?= $_SESSION["ERRO"] ?>
                 </div>
                     <button type="submit" class="btn btn-warning">Cadastrar-se</button>
                 </div>
@@ -107,7 +108,7 @@
                     <script>                  
                         $(".cnpj").mask('000.000.000/0000-00', {reverse: true});
                         $(".telefone").mask('00 00000-0000', {reverse: true});
-                        $(".cep").mask('000.000-00', {reverse: true});
+                        $(".cep").mask('00.000-000', {reverse: true});
                     </script>
 </body>
 </html>
