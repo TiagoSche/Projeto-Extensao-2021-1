@@ -1,5 +1,23 @@
+
+  <head>
+  <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Index</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="../CSS/estilo.css">
+  </head>
 <?php session_start(); 
 $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) || isset($_SESSION['instituicao_ong']) && !empty($_SESSION['instituicao_ong']);
+if($logged === true){
+  echo "<div class='dropdown'>
+  <img style='margin-left: 97%' class='dropbtn' src='../IMG/login-iconeicon.svg'>
+    <div class='dropdown-content'>
+      <a href='../PHPPaginas/perfil.php'>Meu perfil</a>
+      <a href='../PHPConsultas/sair.php'>Sair</a>
+    </div>
+    </div>";
+}
 ?>
 
 
