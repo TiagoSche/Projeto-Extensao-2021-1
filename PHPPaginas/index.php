@@ -8,8 +8,6 @@
     <title>Index</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/estilo.css">
-    
-    
 <style>
 </style>
 
@@ -17,9 +15,10 @@
 <body>
   
 <!------------------------------------------------------Menu-------------------------------------------------------------> 
-<?php  include "header.php";
+<?php  
+include "header.php";
 $_SESSION["ERRO"] = '';
-
+$idDoar= (!$logged) ? "botaoDoar" : "";
 ?>
 
 
@@ -32,9 +31,9 @@ $_SESSION["ERRO"] = '';
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <h2 class="sub_titulo">Faça a diferença na vida dessas pessoas com apenas alguns cliques </h2>
             <p><h6 class="linha">______</h6></p>
-            <a href="<?= ($logged) ? "doar" : "loginAmbos"; ?>.php"><button type="button" class="btn btn-warning">Doar</button></a>
+            <a><button  id= "botaoDoar" type="button" class="btn btn-warning">Doar</button></a>
             <p><h6 class="linha">_____OU_____</h6></p>
-            <a href="<?= ($logged) ? "paginas" : "loginAmbos"; ?>.php"><button type="button" class="btn-usuario btn btn-warning">É uma Ong?</button></a>    
+            <a href="../PHPPaginas/cadastroong.php"><button type="button" class="btn btn-warning">É uma Ong?</button></a>    
           </div>
         </div>
       </div>
@@ -102,24 +101,22 @@ $_SESSION["ERRO"] = '';
     </header>   
     <img class="d-block w-100" src="../IMG/bg-masthead3.jpg" alt="Second slide">    
    
-      <div class="rodap"><br><br>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              EstúdioDev 2021/1<p> direitos reservados.</p>
-            </div>
-            <div class="linha-vertical"></div>
-            <div class="col-sm">
-              Telefone <p> (47) 2512-3100</p>
-              E-mail<p>qualquercoisa@unisociesc.com.br</p>
-            </div>
-            <div class="linha-vertical"></div>
-            <div class="col-sm">
-              UniSociesc
-            </div>
-          </div><br><br>
-        </div>
-    </div>
-    <script src="../JS/botoes.js"></script>
+      
+    <script>
+      var botaoSair = document.querySelector("#botaoSair");
+      if (botaoSair != null){
+        botaoSair.onclick=function() {
+        var diolog = confirm("Deseja mesmo sair?");
+
+          if (!diolog){
+          return false;
+        }
+      
+        }
+      }
+    </script>
+    <script src="../JS/script.js"></script>
+    <?php include "Footer.php";
+    ?>
 </body>
 </html>

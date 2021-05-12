@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/estilo.css">
@@ -13,7 +13,8 @@
 </head>
 <body>
     <?php
-    include "header.php";?>
+    include "header.php";
+    ?>
 
         <!--------------------------------------------Login ONG----------------------------------------------->
             <!----<form method="$_POST" action="../PHPConsultas/loginOng-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
@@ -85,31 +86,15 @@
                 </div>
             </form></br></br></br></br>
                 <img class="d-block w-100" src="../IMG/bg-masthead3.jpg" alt="Second slide">    
-                    <div class="rodap"><br><br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm">
-                                    EstúdioDev 2021/1<p> direitos reservados.</p>
-                                </div>
-                                    <div class="linha-vertical"></div>
-                                        <div class="col-sm">
-                                            Telefone <p> (47) 2512-3100</p>
-                                            E-mail<p>qualquercoisa@unisociesc.com.br</p>
-                                        </div>
-                                            <div class="linha-vertical"></div>
-                                                <div class="col-sm">
-                                                    UniSociesc
-                                                </div>
-                                            </div><br><br>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <script>                  
                         $(".cnpj").mask('000.000.000/0000-00', {reverse: true});
                         $(".telefone").mask('00 00000-0000', {reverse: true});
                         $(".cep").mask('00.000-000', {reverse: true});
                     </script>
+
+<?php include "Footer.php";
+    ?>
 </body>
 </html>
 

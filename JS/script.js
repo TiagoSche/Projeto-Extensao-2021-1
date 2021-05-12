@@ -3,13 +3,14 @@ function iniciaModal(modalID) {
 
   modal.classList.add("mostrar");
   modal.addEventListener("click", (evento) => {
+              //fora da tela                          classe fechar
     if (evento.target.id == modalID || evento.target.className == "fechar") {
-      modal.classList.remove("mostrar");
+      modal.classList.remove("mostrar"); // remove a função 
     }
   });
 }
 
-const ativar = document.querySelector("#ativar");
+const ativar = document.querySelector(".ativar");
 
 ativar.addEventListener("click", () => iniciaModal("modal-login"));
 
@@ -29,11 +30,19 @@ function iniciaModalRegistro(modalRegistroID) {
   });
 }
 
-const ativar_registro = document.querySelector("#ativar_registro");
+const ativar_registro = document.querySelector(".ativar_registro");
 
 ativar_registro.addEventListener("click", () =>
   iniciaModalRegistro("modal_reg"),
 );
 
-/* Script botão SAIR*/
+const botaoDoar = document.querySelector("#botaoDoar");
+console.log(botaoDoar);
+
+/*botaoDoar.addEventListener("click", () => {
+  iniciaModal("modal-login");
+  console.log("teste");
+})*/
+               
+
 

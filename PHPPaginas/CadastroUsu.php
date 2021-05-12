@@ -13,7 +13,7 @@
     <title>Login</title>
 </head>
 <body>
-    <?php  include "header.php"; 
+    <?php  include "header.php";
     $_SESSION["ERRO"] = '';
     ?>
 
@@ -36,15 +36,12 @@
             <!--------------------------------------------Cadastro----------------------------------------------->
             <form method="POST" action="../PHPConsultas/cadastro-action.php" class="form_registro container">
                 <h2>Cadastro de Usuario</h2></br>
-                <div class="form-row">
+                <div class="form-group">
                     <div class="form-group col-md-4">
                     <label for="inputEmail4">Nome</label>
                     <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome">
                     </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputPassword4">Sobrenome</label>
-                    <input type="text" class="form-control" id="inputPassword4" name="sobrenome" placeholder="Sobrenome">
-                    </div>
+                    
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -67,29 +64,12 @@
                 </div>
             </form></br></br></br></br>
                 <img class="d-block w-100" src="../IMG/bg-masthead3.jpg" alt="Second slide">    
-                    <div class="rodap"><br><br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm">
-                                    EstúdioDev 2021/1<p> direitos reservados.</p>
-                                </div>
-                                    <div class="linha-vertical"></div>
-                                        <div class="col-sm">
-                                            Telefone <p> (47) 2512-3100</p>
-                                            E-mail<p>qualquercoisa@unisociesc.com.br</p>
-                                        </div>
-                                            <div class="linha-vertical"></div>
-                                                <div class="col-sm">
-                                                    UniSociesc
-                                                </div>
-                                            </div><br><br>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 <script>                  
 $(".cpf").mask('000.000.000-00', {reverse: true});
 </script>
+<?php include "Footer.php";
+    ?>
 </body>
 
 </html>
