@@ -36,13 +36,13 @@ ativar_registro.addEventListener("click", () =>
   iniciaModalRegistro("modal_reg"),
 );
 
-const botaoDoar = document.querySelector("#botaoDoar");
-console.log(botaoDoar);
+/*botao cadastrar, dentro do login (Doar)*/
 
-/*botaoDoar.addEventListener("click", () => {
-  iniciaModal("modal-login");
-  console.log("teste");
-})*/
-               
+const botaoCadastro = document.querySelector("#botaoCadastro");
+
+botaoCadastro.addEventListener("click", (event) =>{
+  event.preventDefault()
+  iniciaModalRegistro("modal_reg")
+});
 
 

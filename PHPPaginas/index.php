@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
@@ -18,7 +17,6 @@
 <?php  
 include "header.php";
 $_SESSION["ERRO"] = '';
-$idDoar= (!$logged) ? "botaoDoar" : "";
 ?>
 
 
@@ -27,13 +25,20 @@ $idDoar= (!$logged) ? "botaoDoar" : "";
       <h1 class="titulo_principal">Ajude uma Família Hoje, Doando <br>Cestas Básicas </h1>
       <p><h4 class="linha">______</h4></div></p>
       <div class="container">
-        <div class="row">
+      <div class="row">
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <h2 class="sub_titulo">Faça a diferença na vida dessas pessoas com apenas alguns cliques </h2>
-            <p><h6 class="linha">______</h6></p>
-            <a><button  id= "botaoDoar" type="button" class="btn btn-warning">Doar</button></a>
-            <p><h6 class="linha">_____OU_____</h6></p>
-            <a href="../PHPPaginas/cadastroong.php"><button type="button" class="btn btn-warning">É uma Ong?</button></a>    
+            <p><h6 class="linha">__</h6></p>
+            <?php
+              if($logged){
+            ?>
+              <a href="../PHPPaginas/../PHPPaginas/Doe.php"><button  type="button" class="btn btn-warning">Doar</button></a>
+            <?php 
+              }else{ ?>
+              <button  type="button" onclick="iniciaModal('modal-login')" class="btn btn-warning">Doar</button>
+              <p><h6 class="linha">OU</h6></p>
+              <button type="button" class="btn btn-warning" onclick="iniciaModal('modal-login')">É uma Ong?</button></a>
+            <?php } ?>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
   <head>
   <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +8,6 @@
       <link rel="stylesheet" href="../CSS/style.css">
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
-      
-
   </head>
 <?php session_start(); 
 $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) || isset($_SESSION['instituicao_ong']) && !empty($_SESSION['instituicao_ong']);
@@ -82,7 +79,8 @@ $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) 
             <label for="inputNovaSenha">Senha</label>
             <input type="password" class="form-control" id="inputEmail4" name="senha_usuario" placeholder="Senha">
             </div>
-            <button class="logar">Logar</button>
+            <button class="logar botoes-modal">Logar</button>
+            <button id="botaoCadastro" onclick= "iniciaModalRegistro('modal_reg')" class="logar botoes-modal">Cadastre-se</button>
           </div>
           </form>
         </div>
@@ -90,7 +88,7 @@ $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) 
       <div id="modal_reg" class="modal-registro-container">
         <div id="modal_registro">
           <button class="fechar">x</button>
-          <h2>Registro</h2>
+          <h2>Cadastro</h2>
           <form method="POST" action="../PHPConsultas/cadastro-action.php">
             <div class="form-row">
                     <div class="col-6">
@@ -123,7 +121,7 @@ $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) 
                     </div>
                     <?= $_SESSION["ERRO"] ?>
                 </div>
-            <button class="logar">Registre-se</button>
+            <button class="logar botoes-modal">Cadastre-se</button>
         </form>
         </div>
       </div>

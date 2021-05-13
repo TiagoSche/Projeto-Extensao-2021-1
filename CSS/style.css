@@ -96,3 +96,9 @@
     opacity: 1;
   }
 }
+
+.botoes-modal {
+  margin-left: 10px;
+  color: white !important;
+  cursor: pointer;
+}
