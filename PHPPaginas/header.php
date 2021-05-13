@@ -6,6 +6,7 @@
       <title>Index</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="../CSS/estilo.css">
+
       <link rel="stylesheet" href="../CSS/style.css">
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
@@ -22,10 +23,7 @@ $logged = isset($_SESSION['nome_usuario']) && !empty($_SESSION['nome_usuario']) 
         <nav class="navbar navbar-dark">
           <div class="dropdown">
             <button class="navbar-toggler  bg-primary text-white"  type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="dropdown-content">
-              <ul class="navbar-nav text-uppercase ml-auto">
+
                 <li class="nav-item"><a class="nav-link" href="historia.php">HISTÓRIA</a></li>
                 <li class="nav-item"><a class="nav-link" href="ongs.php">ONGs</a></li>
                 <li class="nav-item"><a class="nav-link" href="Doe.php">DOE</a></li>

@@ -16,6 +16,7 @@
   
 <!------------------------------------------------------Menu-------------------------------------------------------------> 
 <?php  
+
 include "header.php";
 $_SESSION["ERRO"] = '';
 $idDoar= (!$logged) ? "botaoDoar" : "";
@@ -31,7 +32,9 @@ $idDoar= (!$logged) ? "botaoDoar" : "";
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <h2 class="sub_titulo">Faça a diferença na vida dessas pessoas com apenas alguns cliques </h2>
             <p><h6 class="linha">______</h6></p>
+
             <a><button  id= "botaoDoar" type="button" class="btn btn-warning">Doar</button></a>
+
             <p><h6 class="linha">_____OU_____</h6></p>
             <a href="../PHPPaginas/cadastroong.php"><button type="button" class="btn btn-warning">É uma Ong?</button></a>    
           </div>
@@ -115,6 +118,7 @@ $idDoar= (!$logged) ? "botaoDoar" : "";
         }
       }
     </script>
+
     <script src="../JS/script.js"></script>
     <?php include "Footer.php";
     ?>
