@@ -65,11 +65,11 @@ class Usuario{
         $sql->execute();
 
 		if ($sql->rowCount() > 0){ 
-           
+            
             //salva os dados da ong no token
             foreach ($sql->fetchAll() as $ong) { 
 				$_SESSION['id_ong'] = $ong['id_ong'];
-                $_SESSION['instituicao_ong'] = $ong['instituicao_ong'];
+                $_SESSION['nome_usuario'] = $ong['instituicao_ong'];
                 $_SESSION['email_ong'] = $ong['email_ong'];
 			}
             

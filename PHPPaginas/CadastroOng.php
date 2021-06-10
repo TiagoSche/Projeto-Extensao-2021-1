@@ -1,7 +1,4 @@
-<?php
-    session_start();
-   
-?>
+
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
@@ -16,36 +13,8 @@
     <title>Login ONG's</title>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg " id="mainNav">
-            <div class="container">
-                <nav class="navbar navbar-dark">
-                <div class="dropdown">
-                    <button class="navbar-toggler bg-warning"  type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="dropdown-content">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">HISTÓRIA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">ONGs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">DOE</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">CONTATO</a></li>
-                    </ul>
-                    </div>    
-                </div>
-                </nav>
-                <a href="../PHPPaginas/index.php"><img src="../IMG/logotipo.png" style="width: 200px;" alt=""></a>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">HISTÓRIA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">| ONGs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">| DOE</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">| CONTATO |</a></li>
-                        <li class="nav-item"> <a class="nav-link btn btn-warning" href="../PHPPaginas/loginambos.php">LOGIN</a></li>
-                    </ul>
-                </div>
-                
-            </div>
-            </nav>
+    <?php   include "header.php"; ?>
+
         <!--------------------------------------------Login ONG----------------------------------------------->
             <!----<form method="$_POST" action="../PHPConsultas/loginOng-action.php" style="margin: 10% 0% 0% 20%" class="form_login">
                 <h2>Login ONG</h2></br>
@@ -68,31 +37,31 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="inputName4">Nome da ONG</label>
-                    <input type="text" class="form-control" id="inputEmail4" name="instituicao_ong" placeholder="Nome">
+                    <input type="text" required="required" class="form-control" id="inputEmail4" name="instituicao_ong" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-4">
                     <label for="inputEmail4">E-mail</label>
-                    <input type="email" class="form-control" id="inputEmail4" name="email_ong" placeholder="instituicao@ong.com.br">
+                    <input type="email" required="required" class="form-control" id="inputEmail4" name="email_ong" placeholder="instituicao@ong.com.br">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-8">
                     <label for="inputNumber4">Endereço</label>
-                    <input type="text" class="form-control" id="inputNumber4" name="endereco_ong" placeholder="Rua xxx, 210">
+                    <input type="text" required="required" class="form-control" id="inputNumber4" name="endereco_ong" placeholder="Rua xxx, 210">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
                     <label for="inputNumber4">CEP</label>
-                    <input type="text" class="form-control cep" id="inputNumber4" name="cep_ong" placeholder="XX.XXX-XXX">
+                    <input type="text" required="required" class="form-control cep" id="inputNumber4" name="cep_ong" placeholder="XX.XXX-XXX">
                     </div>
                     <div class="form-group col-md-3">
                     <label for="inputNumber4">Telefone</label>
-                    <input type="text" class="form-control telefone" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
+                    <input type="text" required="required" class="form-control telefone" id="inputNumber4" name="telefone_ong" placeholder="(XX) XXXXX-XXXX">
                     </div>
                     <div class="form-group col-md-3">
                     <label for="inputNumber4">CNPJ</label>
-                    <input type="text" class="form-control cnpj" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
+                    <input type="text" required="required" class="form-control cnpj" id="inputNumber4" name="cnpj_ong" placeholder="XXX.XXX.XXX/XXXX-XX">
                     </div>
                 </div>
                     <div class="form-group">
@@ -102,7 +71,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="inputPassword4">Senha</label>
-                    <input type="password" class="form-control" id="inputPassword4" name="senha_ong" placeholder="Senha">
+                    <input type="password" required="required" class="form-control" id="inputPassword4" name="senha_ong" placeholder="Senha">
                     </div>
                     <!-- Verificar a função de confirmar senha
                     <div class="form-group col-md-4">
